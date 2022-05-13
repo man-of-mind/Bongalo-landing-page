@@ -1,0 +1,10 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.App {
+    .hero {
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('./assets/images/heroPic.svg');
+    }
+}
