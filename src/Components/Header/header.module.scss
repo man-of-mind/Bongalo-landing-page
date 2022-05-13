@@ -1,0 +1,26 @@
+.header {
+    padding: 117px 71px 0px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .hero-texts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .hero-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 92px;
+            text-align: center;
+            color: #FFFFFF;
+            span {
+                color: #3E94FE;
+            }
+        }
+    }
+    .down-pic {
+        padding-top: 36px;
+    }
+}
