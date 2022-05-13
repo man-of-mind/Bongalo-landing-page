@@ -9,8 +9,13 @@ const Home = () => {
             <div className={styles['hero-section']}>
                 <NavBar />
                 <Header />
+                <div className={styles['floating-container']}>
+                    <div className={styles['feature-container']}>
+                        
+                    </div>
+                </div>
             </div>
-            <div>what is going on here</div>
+            
         </div>
     );
 }
