@@ -14,13 +14,14 @@
         background-size: cover;
         background-repeat: no-repeat;
         height: 840px;
-        .text {
+        .floating-container {
             position: absolute;
-            top: 776px;
-            background-color: black;
-            color: whitesmoke;
-            border-radius: 10px;
-            height: 70px;
+            top: 746px;
+            background: #FFFFFF;
+            box-shadow: 0px 50px 100px rgba(62, 148, 254, 0.15);
+            border-radius: 5px;
+            width: calc(100vw - 264px);
+            height: 140px;
             margin-left: 67px;
             margin-right: 67px;
             padding: 38px 59px 38px 58px;
@@ -28,6 +29,44 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                .feature {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    color: #000000;
+                    span {
+                        padding: 20px 0px 30px 0px;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 25px;
+                        line-height: 29px;
+                    }
+                    select {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 17.1724px;
+                        line-height: 20px;
+                        color: rgba(18, 23, 30, 0.654531);
+                        outline: none;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        background-color: white;
+                        border-bottom: 0.858621px solid rgba(18, 23, 30, 0.654531);
+                    }
+                }
+                .search {
+                    text-align: center;
+                    padding: 20px 60px;
+                    background: #3E94FE;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 25px;
+                    color: #FFFFFF;
+                }
             }
         }
     }
