@@ -35,6 +35,20 @@
                     justify-content: flex-start;
                     align-items: flex-start;
                     color: #000000;
+                    .img-container {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: rgba(62, 148, 254, 0.2);
+                        position: relative;
+                        img {
+                            position: absolute;
+                            display: block;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
                     span {
                         padding: 20px 0px 30px 0px;
                         font-style: normal;
@@ -69,5 +83,67 @@
                 }
             }
         }
+    }
+    .featured-cities {
+        margin-top: 187px;
+        margin-left: 69px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 46px;
+        color: #000000;
+    }
+    .featured-cities-images {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 20px;
+        row-gap: 42px;
+        margin: 41px 71px 73px 69px;
+        .first-grid-items {
+            grid-column: 1/-1;
+            .flex-items {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 20px;
+                color: #FFFFFF;
+                font-style: normal;
+                .detail {
+                    display: block;
+                    span {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                    }
+                    .city-name {
+                        font-weight: 400;
+                        font-size: 60px;
+                        line-height: 69px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .detail {
+            display: block;
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+            }
+            .city-name {
+                font-weight: 400;
+                font-size: 60px;
+                line-height: 69px;
+                text-align: center;
+            }
+        }
+    }
+    .featured-place {
+        padding-left: 69px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 46px;
+        color: #000000;
     }
 }
