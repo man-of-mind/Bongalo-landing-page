@@ -146,4 +146,40 @@
         line-height: 46px;
         color: #000000;
     }
+    .places {
+        margin-left: 69px;
+        margin-right: 71px;
+        width: calc(100% - 140px);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+        .place-detail {
+            margin-top: 34px;
+            display: block;
+            img {
+                width: 100%;
+            }
+            .room-name {
+                margin-top: 17px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-style: normal;
+                .name {
+                    margin-right: auto;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #000000;
+                }
+                .room {
+                    margin-right: auto;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 17px;
+                    color: rgba(18, 23, 30, 0.654531);
+                }
+            }
+        }
+    }
 }

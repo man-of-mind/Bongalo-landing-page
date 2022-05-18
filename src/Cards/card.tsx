@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./card.module.scss";
 
 interface Props {
-    startGradient: string,
-    endGradient: string,
-    children: React.ReactNode,
+    startGradient?: string,
+    endGradient?: string,
+    children?: React.ReactNode,
     bgImage: string
 }
 

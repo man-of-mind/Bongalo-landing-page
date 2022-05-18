@@ -11,6 +11,10 @@ import rubavu from "../../assets/images/rubavu.svg";
 import duola from "../../assets/images/duola.svg";
 import butare from "../../assets/images/butare.svg";
 import CityCard from "../../Cards/card";
+import place1 from "../../assets/images/place1.svg";
+import place2 from "../../assets/images/place2.svg";
+import place3 from "../../assets/images/place3.svg";
+import place4 from "../../assets/images/place4.svg";
 
 const Home = () => {
     return (
@@ -89,6 +93,37 @@ const Home = () => {
                     </CityCard>
                 </div>
                 <div className={styles['featured-place']}>Featured Places</div>
+                <div className={styles['places']}>
+                    <div className={styles['place-detail']}>
+                        <img src={place1} alt="feature place"></img>
+                        <div className={styles['room-name']}>
+                            <div className={styles['name']}>SCI Shalismi</div>
+                            <div className={styles['room']}>Room</div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div className={styles['place-detail']}>
+                        <img src={place2} alt="feature place"></img>
+                        <div className={styles['room-name']}>
+                            <div className={styles['name']}>SCI Shalismi</div>
+                            <div className={styles['room']}>Room</div>
+                        </div>
+                    </div>
+                    <div className={styles['place-detail']}>
+                        <img src={place3} alt="feature place"></img>
+                        <div className={styles['room-name']}>
+                            <div className={styles['name']}>SCI Shalismi</div>
+                            <div className={styles['room']}>Room</div>
+                        </div>
+                    </div>
+                    <div className={styles['place-detail']}>
+                        <img src={place4} alt="feature place"></img>
+                        <div className={styles['room-name']}>
+                            <div className={styles['name']}>SCI Shalismi</div>
+                            <div className={styles['room']}>Room</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
