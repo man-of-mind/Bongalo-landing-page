@@ -20,8 +20,12 @@
             }
         }
     }
-    .down-pic {
-        padding-top: 56px;
-        padding-bottom: 233px;
+    .circle {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        background-color: none;
+        border: 1px solid #FFFFFF;
+        margin-top: 36px;
     }
 }
