@@ -90,99 +90,70 @@ const Home = () => {
                             </CityCard>
                         </div>
                         <div className={styles['flex-items-mobile']}>
-                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="250px" height="133px">
+                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
                                 <div className={styles['detail']}>
                                     <p className={styles['city-name']}>Kigali</p>
                                     <span>25 properties</span>
                                 </div>
                             </CityCard>
-                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="250px" height="133px">
+                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
                                <div className={styles['detail']}>
                                 <p className={styles['city-name']}>Yaounde</p>
                                 <span>15 properties</span>
                                </div>
                             </CityCard>
                         </div>
+                        
                     </div>
-                    <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
-                        <div className={styles['detail']}>
-                            <p className={styles['city-name']}>Rubavu</p>
-                            <span>32 properties</span>
-                       </div>
-                    </CityCard>
-                    <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
-                        <div className={styles['detail']}>
-                            <p className={styles['city-name']}>Duola</p>
-                            <span>16 properties</span>
-                       </div>
-                    </CityCard>
-                    <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
-                        <div className={styles['detail']}>
-                            <p className={styles['city-name']}>Butare</p>
-                            <span>32 properties</span>
-                       </div>
-                    </CityCard>
+                    <div className={styles['second-grid-items']}>
+                        <div className={styles['desktop-card-city']}>
+                            <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Rubavu</p>
+                                    <span>32 properties</span>
+                                </div>
+                            </CityCard>
+                            <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Duola</p>
+                                    <span>16 properties</span>
+                                </div>
+                            </CityCard>
+                            <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Butare</p>
+                                    <span>32 properties</span>
+                                </div>
+                            </CityCard>
+                        </div>
+                        <div className={styles['mobile-card-city']}>
+                            <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Rubavu</p>
+                                    <span>32 properties</span>
+                                </div>
+                            </CityCard>
+                            <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Duola</p>
+                                    <span>16 properties</span>
+                                </div>
+                            </CityCard>
+                            <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Butare</p>
+                                    <span>32 properties</span>
+                                </div>
+                            </CityCard>
+                        </div>
+                    </div>
                 </div>
-                <div className={styles['featured-place']}>Featured Places</div>
-                <div className={styles['places']}>
-                    <div className={styles['place-detail']}>
-                        <img src={place1} alt="feature place" className={styles['img']}></img>
-                        <div className={styles['room-name']}>
-                            <div className={styles['name']}>SCI Shalismi</div>
-                            <div className={styles['room']}>Room</div>
-                        </div>
-                        <div className={styles['price-icon']}>
-                            <div className={styles['per-night']}>
-                                <span>$120</span><em>/night</em>
-                            </div>
-                            <div className={styles['icons']}>
-                                <>3</>
-                                <img src={bed} alt="bed icon"></img>
-                                <>7</>
-                                <img src={shower} alt="bathroom"></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles['place-detail']}>
-                        <img src={place2} alt="feature place" className={styles['img']}></img>
-                        <div className={styles['room-name']}>
-                            <div className={styles['name']}>SCI Shalismi</div>
-                            <div className={styles['room']}>Room</div>
-                        </div>
-                        <div className={styles['price-icon']}>
-                            <div className={styles['per-night']}>
-                                <span>$120</span><em>/night</em>
-                            </div>
-                            <div className={styles['icons']}>
-                                <>3</>
-                                <img src={bed} alt="bed icon"></img>
-                                <>7</>
-                                <img src={shower} alt="bathroom"></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles['place-detail']}>
-                        <img src={place3} alt="feature place" className={styles['img']}></img>
-                        <div className={styles['room-name']}>
-                            <div className={styles['name']}>SCI Shalismi</div>
-                            <div className={styles['room']}>Room</div>
-                        </div>
-                        <div className={styles['price-icon']}>
-                            <div className={styles['per-night']}>
-                                <span>$120</span><em>/night</em>
-                            </div>
-                            <div className={styles['icons']}>
-                                <>3</>
-                                <img src={bed} alt="bed icon"></img>
-                                <>7</>
-                                <img src={shower} alt="bathroom"></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles['place-detail']}> 
-                        <div>
-                            <img src={place4} alt="feature place" className={styles['img']}></img>
-                            
+                
+                <div className={styles['wrapper']}>
+                    <div className={styles['featured-place']}>Featured Places</div>
+                    <div className={styles['places']}>
+                        <div className={styles['place-detail']}>
+                            <img src={place1} alt="feature place" className={styles['img']}></img>
                             <div className={styles['room-name']}>
                                 <div className={styles['name']}>SCI Shalismi</div>
                                 <div className={styles['room']}>Room</div>
@@ -198,9 +169,66 @@ const Home = () => {
                                     <img src={shower} alt="bathroom"></img>
                                 </div>
                             </div>
-                        </div> 
-                        <div className={styles['next']}>
-                            <img src={next} alt="next icon"></img>
+                        </div>
+                        <div className={styles['place-detail']}>
+                            <img src={place2} alt="feature place" className={styles['img']}></img>
+                            <div className={styles['room-name']}>
+                                <div className={styles['name']}>SCI Shalismi</div>
+                                <div className={styles['room']}>Room</div>
+                            </div>
+                            <div className={styles['price-icon']}>
+                                <div className={styles['per-night']}>
+                                    <span>$120</span><em>/night</em>
+                                </div>
+                                <div className={styles['icons']}>
+                                    <>3</>
+                                    <img src={bed} alt="bed icon"></img>
+                                    <>7</>
+                                    <img src={shower} alt="bathroom"></img>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles['place-detail']}>
+                            <img src={place3} alt="feature place" className={styles['img']}></img>
+                            <div className={styles['room-name']}>
+                                <div className={styles['name']}>SCI Shalismi</div>
+                                <div className={styles['room']}>Room</div>
+                            </div>
+                            <div className={styles['price-icon']}>
+                                <div className={styles['per-night']}>
+                                    <span>$120</span><em>/night</em>
+                                </div>
+                                <div className={styles['icons']}>
+                                    <>3</>
+                                    <img src={bed} alt="bed icon"></img>
+                                    <>7</>
+                                    <img src={shower} alt="bathroom"></img>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles['place-detail']}> 
+                            <div>
+                                <img src={place4} alt="feature place" className={styles['img']}></img>
+                                
+                                <div className={styles['room-name']}>
+                                    <div className={styles['name']}>SCI Shalismi</div>
+                                    <div className={styles['room']}>Room</div>
+                                </div>
+                                <div className={styles['price-icon']}>
+                                    <div className={styles['per-night']}>
+                                        <span>$120</span><em>/night</em>
+                                    </div>
+                                    <div className={styles['icons']}>
+                                        <>3</>
+                                        <img src={bed} alt="bed icon"></img>
+                                        <>7</>
+                                        <img src={shower} alt="bathroom"></img>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div className={styles['next']}>
+                                <img src={next} alt="next icon"></img>
+                            </div>
                         </div>
                     </div>
                 </div>
