@@ -29,3 +29,18 @@
         margin-top: 36px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .header {
+        padding: 0px 38px 0px 38px;
+        .hero-texts {
+            img {
+                display: none;
+            }
+            .hero-text {
+                font-size: 70px;
+                line-height: 80px;
+            }
+        }
+    }
+}

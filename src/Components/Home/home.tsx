@@ -75,14 +75,28 @@ const Home = () => {
                 <div className={styles['featured-cities']}>Featured Cities</div>
                 <div className={styles['featured-cities-images']}>
                     <div className={styles['first-grid-items']}>
-                        <div className={styles['flex-items']}>
-                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)'>
+                        <div className={styles['flex-items-desktop']}>
+                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
                                 <div className={styles['detail']}>
                                     <p className={styles['city-name']}>Kigali</p>
                                     <span>25 properties</span>
                                 </div>
                             </CityCard>
-                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)'>
+                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                               <div className={styles['detail']}>
+                                <p className={styles['city-name']}>Yaounde</p>
+                                <span>15 properties</span>
+                               </div>
+                            </CityCard>
+                        </div>
+                        <div className={styles['flex-items-mobile']}>
+                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="250px" height="133px">
+                                <div className={styles['detail']}>
+                                    <p className={styles['city-name']}>Kigali</p>
+                                    <span>25 properties</span>
+                                </div>
+                            </CityCard>
+                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="250px" height="133px">
                                <div className={styles['detail']}>
                                 <p className={styles['city-name']}>Yaounde</p>
                                 <span>15 properties</span>
@@ -90,19 +104,19 @@ const Home = () => {
                             </CityCard>
                         </div>
                     </div>
-                    <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)'>
+                    <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
                         <div className={styles['detail']}>
                             <p className={styles['city-name']}>Rubavu</p>
                             <span>32 properties</span>
                        </div>
                     </CityCard>
-                    <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)'>
+                    <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
                         <div className={styles['detail']}>
                             <p className={styles['city-name']}>Duola</p>
                             <span>16 properties</span>
                        </div>
                     </CityCard>
-                    <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)'>
+                    <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
                         <div className={styles['detail']}>
                             <p className={styles['city-name']}>Butare</p>
                             <span>32 properties</span>

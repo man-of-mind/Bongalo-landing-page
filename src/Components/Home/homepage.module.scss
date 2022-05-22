@@ -101,7 +101,7 @@
         margin: 41px 71px 73px 69px;
         .first-grid-items {
             grid-column: 1/-1;
-            .flex-items {
+            .flex-items-desktop {
                 display: grid;
                 grid-template-columns: auto auto;
                 gap: 20px;
@@ -121,6 +121,9 @@
                         text-align: center;
                     }
                 }
+            }
+            .flex-items-mobile {
+                display: none;
             }
         }
         .detail {
@@ -280,5 +283,54 @@
         margin: 17px 71px 130px 69px;
         justify-content: space-evenly;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .homepage {
+        .hero-section {
+            .floating-container {
+                top: 600px;
+                width: 100%;
+                margin: 0 24px 96px 23px;
+                padding: 53px 0px 52px 81px;
+                .feature-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .featured-cities {
+                font-size: 35px;
+                line-height: 40px;
+                margin-top: 750px;
+            }
+            .featured-cities-images {
+                margin: 15px 24px 67px 23px;
+                .first-grid-items {
+                    .flex-items-desktop {
+                        display: none;
+                    }
+                    .flex-items-mobile {
+                        grid-template-columns: 250px 250px;
+                        .detail {
+                            display: block;
+                            span {
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 23px;
+                            }
+                            .city-name {
+                                font-weight: 400;
+                                font-size: 23px;
+                                line-height: 26px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
