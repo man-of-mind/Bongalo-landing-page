@@ -66,19 +66,24 @@ footer {
     .footer-table {
         display: flex;
         margin-top: 148px;
-        table th {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 34px;
-            text-align: justify;
-            padding-right: 60px;
-            padding-bottom: 24px;
+        .desktop {
+            table th {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 34px;
+                text-align: justify;
+                padding-right: 60px;
+                padding-bottom: 24px;
+            }
+            table td {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 34px;
+                text-align: justify;
+            }
         }
-        table td {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 34px;
-            text-align: justify;
+        .mobile {
+            display: none;
         }
         .join-us {
             display: flex;
@@ -117,6 +122,44 @@ footer {
             img {
                 padding-left: 10px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        .footer-logo-section {
+            display: flex;
+            flex-direction: column;
+            .newsletter {
+                .input-button {
+                    .input-container {
+                        width: 220px;
+                    }
+                }
+            }
+        }
+        .footer-table {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: flex;
+                flex-direction: column;
+                .about-link {
+                    display: flex;
+                    .about {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+            .join-us {
+                display: none;
+            }
+        }
+        .copyright-section {
+            display: block;
         }
     }
 }

@@ -30,42 +30,86 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styles['footer-table']}>
-                <table>
-                    <tr>
-                        <th>ABOUT BONGALO</th>
-                        <th>LINKS</th>
-                        <th>CONTACT</th>
-                    </tr>
-                    <tr>
-                        <td>About us</td>
-                        <td>Blog</td>
-                        <td>4th Floor, Fairview Building</td>
-                    </tr>
-                    <tr>
-                        <td>Company</td>
-                        <td>Privacy Policy</td>
-                        <td>KG 622 St, Kigali, Rwanda</td>
-                    </tr>
-                    <tr>
-                        <td>Career</td>
-                        <td>Terms &#38; Conditions</td>
-                    </tr>
-                    <tr>
-                        <td>Press Release</td>
-                        <td></td>
-                        <td>6th Floor CamCull Building</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>Comm Ave, Bamenda, Cameroon</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>info@bongalo.co</td>
-                    </tr>
-                </table>
+                <div className={styles['desktop']}>
+                    <table>
+                        <tr>
+                            <th>ABOUT BONGALO</th>
+                            <th>LINKS</th>
+                            <th>CONTACT</th>
+                        </tr>
+                        <tr>
+                            <td>About us</td>
+                            <td>Blog</td>
+                            <td>4th Floor, Fairview Building</td>
+                        </tr>
+                        <tr>
+                            <td>Company</td>
+                            <td>Privacy Policy</td>
+                            <td>KG 622 St, Kigali, Rwanda</td>
+                        </tr>
+                        <tr>
+                            <td>Career</td>
+                            <td>Terms &#38; Conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Press Release</td>
+                            <td></td>
+                            <td>6th Floor CamCull Building</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Comm Ave, Bamenda, Cameroon</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>info@bongalo.co</td>
+                        </tr>
+                    </table>
+                </div>
+                <div className={styles['mobile']}>
+                    <div className={styles['about-link']}>
+                        <div className={styles['about']}>
+                            <h2>ABOUT BANGOLO</h2>
+                            <ul>
+                                <li>About us</li>
+                                <li>Company</li>
+                                <li>Career</li>
+                                <li>Press Release</li>
+                            </ul>
+                        </div>
+                        <div className={styles['about']}>
+                            <h2>ABOUT BANGOLO</h2>
+                            <ul>
+                                <li>About us</li>
+                                <li>Company</li>
+                                <li>Career</li>
+                                <li>Press Release</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={styles['about-link']}>
+                        <div className={styles['about']}>
+                            <h2>ABOUT BANGOLO</h2>
+                            <ul>
+                                <li>About us</li>
+                                <li>Company</li>
+                                <li>Career</li>
+                                <li>Press Release</li>
+                            </ul>
+                        </div>
+                        <div className={styles['about']}>
+                            <h2>ABOUT BANGOLO</h2>
+                            <ul>
+                                <li>About us</li>
+                                <li>Company</li>
+                                <li>Career</li>
+                                <li>Press Release</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles['join-us']}>
                     <div>JOIN US</div>
                     <div className={styles['social-media-icons']}>
