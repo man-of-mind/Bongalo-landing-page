@@ -31,9 +31,13 @@ import digitalOcean from "../../assets/images/digitalOcean.svg";
 import sendGrid from "../../assets/images/sendGrid.svg";
 import nkap from "../../assets/images/nkap.svg";
 import Footer from "../Footer/footer";
+import useWindowDimensions from "../hook";
 
 
 const Home = () => {
+    const { width } = useWindowDimensions();
+    let cardHeight = "0";
+    width <= 700 ? cardHeight = "145px" : cardHeight = "348px";
     return (
         <div className={styles['homepage']}>
             <div className={styles['hero-section']}>
@@ -76,70 +80,35 @@ const Home = () => {
                 <div className={styles['featured-cities-images']}>
                     <div className={styles['first-grid-items']}>
                         <div className={styles['flex-items-desktop']}>
-                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height={cardHeight}>
                                 <div className={styles['detail']}>
                                     <p className={styles['city-name']}>Kigali</p>
                                     <span>25 properties</span>
                                 </div>
                             </CityCard>
-                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height={cardHeight}>
                                <div className={styles['detail']}>
                                 <p className={styles['city-name']}>Yaounde</p>
                                 <span>15 properties</span>
                                </div>
                             </CityCard>
                         </div>
-                        <div className={styles['flex-items-mobile']}>
-                            <CityCard bgImage={kigali} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
-                                <div className={styles['detail']}>
-                                    <p className={styles['city-name']}>Kigali</p>
-                                    <span>25 properties</span>
-                                </div>
-                            </CityCard>
-                            <CityCard bgImage={yaonde} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
-                               <div className={styles['detail']}>
-                                <p className={styles['city-name']}>Yaounde</p>
-                                <span>15 properties</span>
-                               </div>
-                            </CityCard>
-                        </div>
-                        
                     </div>
                     <div className={styles['second-grid-items']}>
                         <div className={styles['desktop-card-city']}>
-                            <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                            <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height={cardHeight}>
                                 <div className={styles['detail']}>
                                     <p className={styles['city-name']}>Rubavu</p>
                                     <span>32 properties</span>
                                 </div>
                             </CityCard>
-                            <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
+                            <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height={cardHeight}>
                                 <div className={styles['detail']}>
                                     <p className={styles['city-name']}>Duola</p>
                                     <span>16 properties</span>
                                 </div>
                             </CityCard>
-                            <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height="348px">
-                                <div className={styles['detail']}>
-                                    <p className={styles['city-name']}>Butare</p>
-                                    <span>32 properties</span>
-                                </div>
-                            </CityCard>
-                        </div>
-                        <div className={styles['mobile-card-city']}>
-                            <CityCard bgImage={rubavu} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
-                                <div className={styles['detail']}>
-                                    <p className={styles['city-name']}>Rubavu</p>
-                                    <span>32 properties</span>
-                                </div>
-                            </CityCard>
-                            <CityCard bgImage={duola} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
-                                <div className={styles['detail']}>
-                                    <p className={styles['city-name']}>Duola</p>
-                                    <span>16 properties</span>
-                                </div>
-                            </CityCard>
-                            <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="245px" height="134px">
+                            <CityCard bgImage={butare} startGradient='rgba(18, 23, 30, 0.654531)' endGradient='rgba(62, 148, 254, 0.22)' width="100%" height={cardHeight}>
                                 <div className={styles['detail']}>
                                     <p className={styles['city-name']}>Butare</p>
                                     <span>32 properties</span>
@@ -243,7 +212,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className={styles['place-detail']}>
-                            <img src={mountain} alt="" className={styles['img']}></img><br></br><br></br>
+                            <img src={mountain} alt="" className={styles['img']} ></img><br></br><br></br>
                             <span>Mountain View</span>
                             <div className={styles['description']}>
                                 <img src={position} alt="location icon"></img>
@@ -251,7 +220,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className={styles['place-detail']}>
-                            <img src={paradise} alt="" className={styles['img']}></img><br></br><br></br>
+                            <img src={paradise} alt="" className={styles['img']} ></img><br></br><br></br>
                             <span>Anastasia Paradise</span>
                             <div className={styles['description']}>
                                 <img src={position} alt="location icon"></img>
@@ -272,33 +241,33 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles['availabilty']}>
-                        <div className={styles['item']}>
-                            <img src={availability} alt="availabilty icon"></img>
-                            <span>Availability</span>
-                            <p>We know how hard it can be finding a perfect home to rent, 
-                                especially when moving to a new country; so we are available 24/7 
-                                for your inquiries about the best places to stay. 
-                                You’ll find the best places to stay on our platform without stress.</p>
-                        </div>
-                        <div className={styles['item']}>
-                            <img src={client} alt="client icon"></img>
-                            <span>Client Satisfaction</span>
-                            <p>Whether you are on a budget or travelling for a; conference, seminar, 
-                                vacation, we got you covered. Plus, you can pay easily with your mobile 
-                                wallet from any country in Africa in addition to the other payment methods 
-                                available on our system.
-                            </p>
-                        </div>
-                        <div className={styles['item']}>
-                            <img src={support} alt="support icon"></img>
-                            <span>Support</span>
-                            <p>We’re available to support you as you book and set out on your trip 
-                                across the continent. Our experienced support team ensures your experience 
-                                stays awesome all the way on your trip and even beyond. 
-                                Count on us for our 24/7 support service.
-                            </p>
-                        </div>
+                </div>
+                <div className={styles['availability']}>
+                    <div className={styles['item']}>
+                        <img src={availability} alt="availabilty icon"></img>
+                        <span>Availability</span>
+                        <p>We know how hard it can be finding a perfect home to rent, 
+                            especially when moving to a new country; so we are available 24/7 
+                            for your inquiries about the best places to stay. 
+                            You’ll find the best places to stay on our platform without stress.</p>
+                    </div>
+                    <div className={styles['item']}>
+                        <img src={client} alt="client icon"></img>
+                        <span>Client Satisfaction</span>
+                        <p>Whether you are on a budget or travelling for a; conference, seminar, 
+                            vacation, we got you covered. Plus, you can pay easily with your mobile 
+                            wallet from any country in Africa in addition to the other payment methods 
+                            available on our system.
+                        </p>
+                    </div>
+                    <div className={styles['item']}>
+                        <img src={support} alt="support icon"></img>
+                        <span>Support</span>
+                        <p>We’re available to support you as you book and set out on your trip 
+                            across the continent. Our experienced support team ensures your experience 
+                            stays awesome all the way on your trip and even beyond. 
+                            Count on us for our 24/7 support service.
+                        </p>
                     </div>
                 </div>
                 <div className={styles["powered-by"]}>Powered By</div>

@@ -6,11 +6,15 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        span {
-            margin-left: 24px;
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 41px;
+        .logo {
+            display: flex;
+            align-items: center;
+            span {
+                margin-left: 24px;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 41px;
+            }
         }
         .newsletter {
             margin-left: 130px;
@@ -128,13 +132,57 @@ footer {
 
 @media screen and (max-width: 700px) {
     footer {
+        padding: 40px 31px 23px 31px;
         .footer-logo-section {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .logo {
+                display: flex;
+                align-items: center;
+                span {
+                    margin-left: 14px;
+                    font-weight: 400;
+                    font-size: 22.1538px;
+                    line-height: 25px;
+                }
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
             .newsletter {
+                margin-left: 0px;
+                .text {
+                    padding-top: 35px;
+                    font-weight: 400;
+                    font-size: 16.063px;
+                    line-height: 170.69%;
+                    text-align: start;
+                    padding-bottom: 12px;
+                }
                 .input-button {
                     .input-container {
-                        width: 220px;
+                        display: flex;
+                        width: 200px;
+                        padding: 13px 0px 15px 13px;
+                        input {
+                            width: 150px;
+                        }
+                        input::placeholder {
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 170.69%;
+                            text-align: justify;
+                        }
+                    }
+                    button {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 170.69%;
+                        margin-left: 8px;
+                        padding: 9px 12px;
                     }
                 }
             }
@@ -148,9 +196,23 @@ footer {
                 flex-direction: column;
                 .about-link {
                     display: flex;
+                    justify-content: space-between;
                     .about {
-                        display: flex;
-                        flex-direction: column;
+                        display: block;
+                        h2 {
+                            font-weight: 700;
+                            line-height: 34px;
+                            font-size: 17px;
+                            text-align: justify;
+                        }
+                        ul {
+                            list-style: none;
+                            li {
+                                font-weight: 400;
+                                font-size: 17px;
+                                padding-bottom: 10px;
+                            }
+                        }
                     }
                 }
             }
@@ -159,7 +221,26 @@ footer {
             }
         }
         .copyright-section {
-            display: block;
+            display: flex;
+            flex-direction: column-reverse;
+            span {
+                font-weight: 900;
+                font-size: 17px;
+                line-height: 170.69%;
+                text-align: justify;
+            }
+            .visa-logo {
+                width: 35px;
+                height: 22px;
+                display: block;
+                margin: auto;
+            }
+            .visa {
+                display: block;
+                margin: auto;
+                width: 61px;
+                height: 19px;
+            }
         }
     }
 }

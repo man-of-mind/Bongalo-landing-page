@@ -14,8 +14,10 @@ const Footer = () => {
     return(
         <footer>
             <div className={styles['footer-logo-section']}>
-                <img src={logo} alt="bangolo logo"></img>
-                <span>Bongalo</span>
+                <div className={styles['logo']}>
+                    <img src={logo} alt="bangolo logo"></img>
+                    <span>Bongalo</span>
+                </div>
                 <div className={styles['newsletter']}>
                     <div className={styles['text']}>Enter your email to subscribe to our newsletter</div>
                     <div className={styles['input-button']}>
@@ -80,12 +82,11 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className={styles['about']}>
-                            <h2>ABOUT BANGOLO</h2>
+                            <h2>LINKS</h2>
                             <ul>
-                                <li>About us</li>
-                                <li>Company</li>
-                                <li>Career</li>
-                                <li>Press Release</li>
+                                <li>Blog</li>
+                                <li>Privacy Policy</li>
+                                <li>Terms &#38; Conditions</li>
                             </ul>
                         </div>
                     </div>
@@ -124,8 +125,8 @@ const Footer = () => {
                 <span>Copyright &#169; 2021 Bongal.co. All rights reserved</span>
                 <div className={styles['payment-option']}>
                     <span>PAYMENT METHODS</span>
-                    <img src={pay} alt="visa logo"></img>
-                    <img src={visa} alt="visa"></img>
+                    <img src={pay} alt="visa logo" className={styles['visa-logo']}></img>
+                    <img src={visa} alt="visa" className={styles['visa']}></img>
                 </div>
             </div>
         </footer>

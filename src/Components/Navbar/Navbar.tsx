@@ -16,8 +16,8 @@ const NavBar = () => {
                 <div>Login</div>
             </div>
             <div className={styles['mobile-view']}>
-                <img src={navIcon} alt="bongalo logo"></img>
-                <img src={BangoloLogo} alt="bangolo logo" width={78} height={78}/>
+                <img src={navIcon} alt="bongalo logo" className={styles['nav']}></img>
+                <img src={BangoloLogo} alt="bangolo logo" width={39} height={39}/>
                 <span>Bangolo</span>
                 <button>Login</button>
             </div>
