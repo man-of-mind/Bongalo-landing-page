@@ -90,24 +90,26 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
+                    <div className={styles['space']}></div>
                     <div className={styles['about-link']}>
                         <div className={styles['about']}>
-                            <h2>ABOUT BANGOLO</h2>
+                            <h2>CONTACT</h2>
                             <ul>
-                                <li>About us</li>
-                                <li>Company</li>
-                                <li>Career</li>
-                                <li>Press Release</li>
+                                <li>4th Floor, Fairview Building </li>
+                                <li>KG 622 St, Kigali, Rwanda</li>
+                                <li>6th Floor CamCull Building</li>
+                                <li>Comm Ave, Bamenda, Cameroon</li>
+                                <li>info@bongalo.co</li>
                             </ul>
                         </div>
-                        <div className={styles['about']}>
-                            <h2>ABOUT BANGOLO</h2>
-                            <ul>
-                                <li>About us</li>
-                                <li>Company</li>
-                                <li>Career</li>
-                                <li>Press Release</li>
-                            </ul>
+                        <div className={styles['join-us']}>
+                            <h2>JOIN US NOW</h2>
+                            <div className={styles['social-media-icons']}>
+                                <img src={youtube} alt="youtube icon" className={styles['yb']}></img>
+                                <img src={twitter} alt="twitter icon"></img>
+                                <img src={facebook} alt="facebbok icon"></img>
+                            </div>
+                            <img src={instagram} alt="instagram icon" className={styles['ig']}></img>
                         </div>
                     </div>
                 </div>

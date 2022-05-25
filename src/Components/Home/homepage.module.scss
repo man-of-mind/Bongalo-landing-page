@@ -430,7 +430,7 @@
             }
             .availability {
                 margin: 0px 0px 100px 0px;
-                padding: 51px 70px 77px 70px;
+                padding: 51px 70px 0px 70px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -439,6 +439,7 @@
                     justify-content: center;
                     align-items: center;
                     width: inherit;
+                    margin-bottom: 100px;
                     span {
                         text-align: center;
                     }

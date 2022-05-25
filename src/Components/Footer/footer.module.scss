@@ -204,6 +204,7 @@ footer {
                             line-height: 34px;
                             font-size: 17px;
                             text-align: justify;
+                            margin-bottom: 25px;
                         }
                         ul {
                             list-style: none;
@@ -214,6 +215,42 @@ footer {
                             }
                         }
                     }
+                    .join-us {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        margin-left: auto;
+                        margin-right: auto;
+                        h2 {
+                            font-weight: 700;
+                            font-size: 17px;
+                            line-height: 34px;
+                        }
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        .ig {
+                            padding-top: 12px;
+                        }
+                        .social-media-icons {
+                            display: flex;
+                            padding-top: 24px;
+                            img {
+                                padding-left: 24px;
+                                width: 24px;
+                                height: 24px;
+                            }
+                            .yb {
+                                padding-left: 0px;
+                            }
+                        }
+                    }
+                }
+                .space {
+                    margin-top: 45px;
                 }
             }
             .join-us {
