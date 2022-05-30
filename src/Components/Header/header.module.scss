@@ -1,9 +1,11 @@
+@import url("//db.onlinewebfonts.com/c/0abeb2471faeb5269db428b9eac2075e?family=GT+Walsheim+Pro+Regular");
 .header {
     padding: 117px 71px 0px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'GT Walsheim Pro Regular';
     .hero-texts {
         display: flex;
         justify-content: space-between;
@@ -30,7 +32,7 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .header {
         padding: 0px 38px 0px 38px;
         .hero-texts {

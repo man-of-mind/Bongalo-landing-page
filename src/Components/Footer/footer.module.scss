@@ -1,7 +1,9 @@
+@import url("//db.onlinewebfonts.com/c/0abeb2471faeb5269db428b9eac2075e?family=GT+Walsheim+Pro+Regular");
 footer {
     background: rgba(62, 148, 254, 0.3);
     padding: 71px 65px 55px 65px;
     color: rgba(18, 23, 30, 0.654531);
+    font-family: 'GT Walsheim Pro Regular';
     .footer-logo-section {
         display: flex;
         justify-content: space-between;
@@ -130,7 +132,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     footer {
         padding: 40px 31px 23px 31px;
         .footer-logo-section {
