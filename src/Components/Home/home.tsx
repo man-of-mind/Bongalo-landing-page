@@ -37,13 +37,33 @@ import useWindowDimensions from "../hook";
 const Home = () => {
     const { width } = useWindowDimensions();
     let cardHeight = "0";
-    width <= 700 ? cardHeight = "145px" : cardHeight = "348px";
+    let top = "0";
+    width <= 768 ? cardHeight = "145px" : cardHeight = "348px";
+   
+    if (width <= 768) {
+        if (width >= 592 && width < 768) {
+            top = "540px";
+        } 
+        else if (width >= 470 && width < 592) {
+            top = "620px";
+        } else if (width >= 444 && width < 470) {
+            top = "700px";
+        }
+        else if (width >= 390 && width < 444) {
+            top = "780px"
+        }
+        else top = "850px"
+    }
+    else {
+        top = "850px";
+    }
+
     return (
         <div className={styles['homepage']}>
             <div className={styles['hero-section']}>
                 <NavBar />
                 <Header />
-                <div className={styles['floating-container']}>
+                <div className={styles['floating-container']} style={{top: top}}>
                     <div className={styles['feature-container']}>
                         <div className={styles['feature']}>
                             <img src={location} alt="location icon"></img>

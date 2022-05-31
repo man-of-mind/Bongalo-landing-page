@@ -28,7 +28,7 @@ const NavBar = () => {
                     <div onClick={() => setIsNavExpanded(!isNavExpanded)}><img src={close} alt="close icon"/></div>
                     <ul>
                         <li>
-                            Home
+                            <a href="/">Home</a>
                         </li>
                         <li>
                             List a property
