@@ -16,7 +16,8 @@ const CityCard:React.FC<Props> = ({startGradient, endGradient, children, bgImage
         height: height,
         backgroundImage: `linear-gradient(to left, ${startGradient}, ${endGradient}), url(${bgImage})`,
         backgroundRepeat: "no-repeat",
-        borderRadius: '5px'
+        borderRadius: '5px',
+        backgroundPosition: 'center'
     }
     return (
         <div className={styles['city-details']} style={style}>

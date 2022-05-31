@@ -9,7 +9,7 @@ const NavBar = () => {
     return(
         <div className={styles['navbar']}>
             <div className={styles['desktop-view']}>
-                <img src={BangoloLogo} alt="bangolo logo" width={78} height={78}/>
+                <img src={BangoloLogo} alt="bangolo logo" />
                 <span className={styles['bangolo']}>Bangolo</span>
                 <div>Home</div>
                 <div>List a property</div>

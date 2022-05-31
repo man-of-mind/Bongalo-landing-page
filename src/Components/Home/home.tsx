@@ -38,7 +38,9 @@ const Home = () => {
     const { width } = useWindowDimensions();
     let cardHeight = "0";
     let top = "0";
-    width <= 768 ? cardHeight = "145px" : cardHeight = "348px";
+    console.log(width)
+    width <= 768 ? cardHeight = "145px" : (width >= 800 && width <= 1100) ? cardHeight = "312px" : cardHeight = "348px";
+    
    
     if (width <= 768) {
         if (width >= 592 && width < 768) {
@@ -55,7 +57,7 @@ const Home = () => {
         else top = "850px"
     }
     else {
-        top = "850px";
+        top = "746px";
     }
 
     return (

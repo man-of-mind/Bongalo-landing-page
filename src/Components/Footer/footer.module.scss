@@ -45,6 +45,7 @@ footer {
                         background-color: none;
                         margin-left: 24px;
                         border: none;
+                        width: 450px;
                     }
                     input::placeholder {
                         font-weight: 400;
@@ -171,10 +172,11 @@ footer {
                         padding: 13px 0px 15px 13px;
                         input {
                             width: 150px;
+                            margin-left: 10px;
                         }
                         input::placeholder {
                             font-weight: 400;
-                            font-size: 12px;
+                            font-size: 14px;
                             line-height: 170.69%;
                             text-align: justify;
                         }
@@ -262,23 +264,69 @@ footer {
         .copyright-section {
             display: flex;
             flex-direction: column-reverse;
+            align-items: flex-start;
             span {
                 font-weight: 900;
                 font-size: 17px;
                 line-height: 170.69%;
                 text-align: justify;
             }
-            .visa-logo {
-                width: 35px;
-                height: 22px;
-                display: block;
-                margin: auto;
+            .payment-option {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                span {
+                    margin-right: auto;
+                }
+                .visa-logo {
+                    width: 35px;
+                    height: 22px;
+                    display: block;
+                    margin-left: auto;
+                }
+                .visa {
+                    display: block;
+                    width: 61px;
+                    height: 19px;
+                }
             }
-            .visa {
-                display: block;
-                margin: auto;
-                width: 61px;
-                height: 19px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    footer {
+        padding: 71px 30px 50px 30px;
+        .footer-logo-section {
+            .logo {
+                img {
+                    width: 56px;
+                    height: 56px;
+                }
+                span {
+                    font-size: 30px;
+                }
+            }
+            .newsletter {
+                margin-left: auto;
+                .text {
+                    font-size: 22px;
+                    line-height: 150%;
+                }
+                .input-button {
+                    .input-container {
+                        width: 420px;
+                        padding: 20px 15px 20px 15px;
+                        input {
+                            width: 350px;
+                            font-size: 18px;
+                        }
+                    }
+                    button {
+                        font-size: 24px;
+                        line-height: 150%;
+                    }
+                }
             }
         }
     }

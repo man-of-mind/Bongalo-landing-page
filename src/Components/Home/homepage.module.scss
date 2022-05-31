@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     .hero-section {
         position: relative;
         background-image: linear-gradient(to left, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../../assets/images/heroPic.png');
@@ -477,6 +477,100 @@
                         padding-right: 63px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .homepage {
+        width: 100vw;
+        align-items: flex-start;
+        .hero-section {
+            width: inherit;
+            .floating-container {
+                height: fit-content;
+                width: calc(100% - 180px);
+                margin-left: 30px;
+                margin-right: 30px;
+                .feature-container {
+                    .feature {
+                        span {
+                            font-size: 22px;
+                            line-height: 27px;
+                        }
+                        select {
+                            font-size: 16px;
+                        }
+                    }
+                    .search {
+                        font-size: 22px;
+                        padding: 20px 50px;
+                    }
+                }
+            }
+        }
+        .featured-cities {
+            margin-top: 420px;
+            margin-left: 30px;
+            line-height: 40px;
+        }
+        .featured-cities-images {
+            column-gap: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+            row-gap: 20px;
+            .first-grid-items {
+                .flex-items-desktop {
+                    .detail {
+                        span {
+                            font-size: 18px;
+                        }
+                        .city-name {
+                            font-size: 55px;
+                        }
+                    }
+                }
+            }
+            .second-grid-items {
+                .desktop-card-city {
+                    row-gap: 20px;
+                    .detail {
+                        span {
+                            font-size: 18px;
+                        }
+                        .city-name {
+                            font-size: 55px;
+                        }
+                    }
+                }
+            }
+        }
+        .featured-place {
+            padding-left: 30px;
+            line-height: 40px;
+        }
+        .wrapper {
+            .places {
+                margin-left: 30px;
+                margin-right: 30px;
+                gap: 15px;
+            }
+        }
+        .availability {
+            margin: 0px 30px 100px 30px;
+            padding: 51px 45px 77px 45px;
+        }
+        .powered-by {
+            text-align: center;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 46px;
+            color: #000000;
+        }
+        .wrap {
+            .partners {
+                margin: 17px 30px 130px 30px;
             }
         }
     }
