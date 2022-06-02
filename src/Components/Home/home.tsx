@@ -32,6 +32,7 @@ import sendGrid from "../../assets/images/sendGrid.svg";
 import nkap from "../../assets/images/nkap.svg";
 import Footer from "../Footer/footer";
 import useWindowDimensions from "../hook";
+import { Place, Carousel } from "../Carousel/carousel";
 
 
 const Home = () => {
@@ -139,7 +140,16 @@ const Home = () => {
                 </div>
                 <div className={styles['featured-place']}>Featured Places</div>
                 <div className={styles['wrapper']}>
-                    <div className={styles['places']}>
+                    <div>
+                        <Carousel>
+                            <Place />
+                            <Place />
+                            <Place />
+                            <Place />
+                            <Place />
+                        </Carousel>
+                    </div>
+    {/*                <div className={styles['places']}>
                         <div className={styles['place-detail']}>
                             <img src={place1} alt="feature place" className={styles['img']}></img>
                             <div className={styles['room-name']}>
@@ -218,7 +228,7 @@ const Home = () => {
                                 <img src={next} alt="next icon"></img>
                             </div>
                         </div>
-                    </div>
+    </div>  */}
                 </div>
                 <div className={styles['featured-place']}>Some Amazing Experiences</div>
                 <div className={styles['wrapper']}>
