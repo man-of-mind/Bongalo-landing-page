@@ -11,9 +11,10 @@ interface ICarouselSlide {
 
 const SCarouselSlide = styled.div<ICarouselSlide>`
   flex: 0 0 auto;
-  opacity: ${props => (props.active ? 1 : 0)};
+  opacity: 1;
   transition: all 0.5s ease;
-  width: 100%;
+  width: 25%;
+  overflow-y: hidden;
 `;
 
 interface props {
@@ -30,6 +31,7 @@ const SContainer = styled.div`
 const SPlaceDetail = styled.div`
     margin-top: 34px;
     display: block;
+    margin-right: 25px;
 `;
 
 const Simg = styled.img`
@@ -114,11 +116,11 @@ export const Place = () => (
 
 
 export const Carousel:React.FC<props> = ({ children }) => {
-//    const [currentSlide, setCurrentSlide] = React.useState(0);
-    const [slides, setSlides] = React.useState([0,1,2]);
+ 
+    const [currentSlide, setCurrentSlide] = React.useState(0);
     const activeSlide = children.map((slide, index) => { 
         return (
-            <SCarouselSlide active={ slides.indexOf(index) !== -1} key={index}>
+            <SCarouselSlide active={currentSlide === index} key={index}>
                 {slide}
             </SCarouselSlide>
         );
@@ -137,22 +139,19 @@ export const Carousel:React.FC<props> = ({ children }) => {
     return (
         <div>
             <SContainer>
-                {activeSlide}
+                <SCarouselSlides currentSlide={currentSlide}>
+                    {activeSlide}
+                </SCarouselSlides>
             </SContainer>
             <button
                 onClick={() => {
-//                    setCurrentSlide((currentSlide - 1 + activeSlide.length) % activeSlide.length);
+                    setCurrentSlide((currentSlide - 1 + activeSlide.length) % activeSlide.length);
                 }}>
                 Left
             </button>
             <button
                 onClick={() => {
-                    const current = slides.map(element => {
-                        return (element + 1) % slides.length
-                    })
-                    console.log(current)
-                    setSlides(current)
- //                   setCurrentSlide((currentSlide + 1) % activeSlide.length);
+                    setCurrentSlide((currentSlide + 1) % activeSlide.length);
                 }}>
                 Right
             </button>
