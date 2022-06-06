@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import next from "../../assets/images/next.svg";
+import prev from "../../assets/images/prev.svg";
 import useWindowDimensions from "../hook";
 import position from "../../assets/images/location2.svg";
 
@@ -32,6 +33,16 @@ const SButton = styled.button`
     position: absolute;
     right: 35px;
 `;
+
+const SLeftButton = styled.button`
+    outline: none;
+    border: none;
+    border-radius: none;
+    background: none;
+    position: absolute;
+    left: 30px;
+`;
+
 
 const SLocation = styled.div`
     display: flex;
@@ -97,7 +108,7 @@ export const Carousel2:React.FC<props> = ({ sliders }) => {
     const SCarouselSlides = styled.div`
         display: flex;
         transition: all 0.5s ease;
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 35px);
         overflow-y: hidden;
         -ms-overflow-style: none;  
         scrollbar-width: none; 
@@ -126,9 +137,21 @@ export const Carousel2:React.FC<props> = ({ sliders }) => {
             });
         }
     };
+    const scrollLeft = () => {
+        if (listRef.current) {
+            listRef.current.scrollBy({
+                top: 0,
+                left: -200,
+                behavior: "smooth",
+            });
+        }
+    };
     return (
         <div>
             <SContainer margin={margin}>
+                <SLeftButton onClick={scrollLeft}>
+                    <img src={prev} alt="next icon"></img>    
+                </SLeftButton>
                 <SCarouselSlides ref={listRef}>
                     {sliders.map((item, index) => {
                             return <Place img={item.img} locationDesc={item.text} key={index}/>

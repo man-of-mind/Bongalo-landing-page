@@ -3,6 +3,7 @@ import styled from "styled-components";
 import bed from "../../assets/images/bed.svg";
 import shower from "../../assets/images/shower.svg";
 import next from "../../assets/images/next.svg";
+import prev from "../../assets/images/prev.svg";
 import useWindowDimensions from "../hook";
 
 interface props {
@@ -31,6 +32,15 @@ const SButton = styled.button`
     background: none;
     position: absolute;
     right: 30px;
+`;
+
+const SLeftButton = styled.button`
+    outline: none;
+    border: none;
+    border-radius: none;
+    background: none;
+    position: absolute;
+    left: 30px;
 `;
 
 const SRoomName = styled.div`
@@ -133,7 +143,7 @@ export const Carousel:React.FC<props> = ({ sliders }) => {
     const SCarouselSlides = styled.div`
         display: flex;
         transition: all 0.5s ease;
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 35px);
         overflow-y: hidden;
         -ms-overflow-style: none;  
         scrollbar-width: none; 
@@ -162,9 +172,22 @@ export const Carousel:React.FC<props> = ({ sliders }) => {
             });
         }
     };
+
+    const scrollLeft = () => {
+        if (listRef.current) {
+            listRef.current.scrollBy({
+                top: 0,
+                left: -200,
+                behavior: "smooth",
+            });
+        }
+    };
     return (
         <div>
             <SContainer margin={margin}>
+                <SLeftButton onClick={scrollLeft}>
+                    <img src={prev} alt="next icon"></img>    
+                </SLeftButton>
                 <SCarouselSlides ref={listRef}>
                     {sliders.map((item, index) => {
                             return <Place img={item} key={index}/>
