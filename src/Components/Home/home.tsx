@@ -15,8 +15,6 @@ import place1 from "../../assets/images/place1.svg";
 import place2 from "../../assets/images/place2.svg";
 import place3 from "../../assets/images/place3.svg";
 import place4 from "../../assets/images/place4.svg";
-import bed from "../../assets/images/bed.svg";
-import shower from "../../assets/images/shower.svg";
 import next from "../../assets/images/next.svg";
 import kigaliCity from "../../assets/images/kigaliCity.svg";
 import mountain from "../../assets/images/mountain.svg";
@@ -32,10 +30,17 @@ import sendGrid from "../../assets/images/sendGrid.svg";
 import nkap from "../../assets/images/nkap.svg";
 import Footer from "../Footer/footer";
 import useWindowDimensions from "../hook";
-import { Place, Carousel } from "../Carousel/carousel";
+import { Carousel } from "../Carousel/carousel";
 
 
 const Home = () => {
+    const data = [
+        place1,
+        place2,
+        place3,
+        place4
+    ]
+
     const { width } = useWindowDimensions();
     let cardHeight = "0";
     let top = "0";
@@ -140,95 +145,7 @@ const Home = () => {
                 </div>
                 <div className={styles['featured-place']}>Featured Places</div>
                 <div className={styles['wrapper']}>
-                    <div>
-                        <Carousel>
-                            <Place />
-                            <Place />
-                            <Place />
-                            <Place />
-                            <Place />
-                        </Carousel>
-                    </div>
-    {/*                <div className={styles['places']}>
-                        <div className={styles['place-detail']}>
-                            <img src={place1} alt="feature place" className={styles['img']}></img>
-                            <div className={styles['room-name']}>
-                                <div className={styles['name']}>SCI Shalismi</div>
-                                <div className={styles['room']}>Room</div>
-                            </div>
-                            <div className={styles['price-icon']}>
-                                <div className={styles['per-night']}>
-                                    <span>$120</span><em>/night</em>
-                                </div>
-                                <div className={styles['icons']}>
-                                    <>3</>
-                                    <img src={bed} alt="bed icon"></img>
-                                    <>7</>
-                                    <img src={shower} alt="bathroom"></img>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles['place-detail']}>
-                            <img src={place2} alt="feature place" className={styles['img']}></img>
-                            <div className={styles['room-name']}>
-                                <div className={styles['name']}>SCI Shalismi</div>
-                                <div className={styles['room']}>Room</div>
-                            </div>
-                            <div className={styles['price-icon']}>
-                                <div className={styles['per-night']}>
-                                    <span>$120</span><em>/night</em>
-                                </div>
-                                <div className={styles['icons']}>
-                                    <>3</>
-                                    <img src={bed} alt="bed icon"></img>
-                                    <>7</>
-                                    <img src={shower} alt="bathroom"></img>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles['place-detail']}>
-                            <img src={place3} alt="feature place" className={styles['img']}></img>
-                            <div className={styles['room-name']}>
-                                <div className={styles['name']}>SCI Shalismi</div>
-                                <div className={styles['room']}>Room</div>
-                            </div>
-                            <div className={styles['price-icon']}>
-                                <div className={styles['per-night']}>
-                                    <span>$120</span><em>/night</em>
-                                </div>
-                                <div className={styles['icons']}>
-                                    <>3</>
-                                    <img src={bed} alt="bed icon"></img>
-                                    <>7</>
-                                    <img src={shower} alt="bathroom"></img>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles['place-detail']}> 
-                            <div>
-                                <img src={place4} alt="feature place" className={styles['img']}></img>
-                                
-                                <div className={styles['room-name']}>
-                                    <div className={styles['name']}>SCI Shalismi</div>
-                                    <div className={styles['room']}>Room</div>
-                                </div>
-                                <div className={styles['price-icon']}>
-                                    <div className={styles['per-night']}>
-                                        <span>$120</span><em>/night</em>
-                                    </div>
-                                    <div className={styles['icons']}>
-                                        <>3</>
-                                        <img src={bed} alt="bed icon"></img>
-                                        <>7</>
-                                        <img src={shower} alt="bathroom"></img>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div className={styles['next']}>
-                                <img src={next} alt="next icon"></img>
-                            </div>
-                        </div>
-    </div>  */}
+                    <Carousel sliders={data} />
                 </div>
                 <div className={styles['featured-place']}>Some Amazing Experiences</div>
                 <div className={styles['wrapper']}>

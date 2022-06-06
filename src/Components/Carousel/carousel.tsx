@@ -1,41 +1,36 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import place1 from "../../assets/images/place1.svg";
+import React, { useRef } from "react";
+import styled from "styled-components";
 import bed from "../../assets/images/bed.svg";
 import shower from "../../assets/images/shower.svg";
-
-
-interface ICarouselSlide {
-  active?: boolean;
-}
-
-const SCarouselSlide = styled.div<ICarouselSlide>`
-  flex: 0 0 auto;
-  opacity: 1;
-  transition: all 0.5s ease;
-  width: 25%;
-  overflow-y: hidden;
-`;
+import next from "../../assets/images/next.svg";
+import useWindowDimensions from "../hook";
 
 interface props {
-    children: JSX.Element[]
+    sliders: Array<any>
 }
 
-const SContainer = styled.div`
-    align-items: center;
-    display: flex;
-    margin-left: 69px;
-    margin-right: 71px;
-`;
+interface Sprops {
+    minWidth: string
+}
 
-const SPlaceDetail = styled.div`
+const SPlaceDetail = styled.div<Sprops>`
     margin-top: 34px;
     display: block;
     margin-right: 25px;
+    min-width: ${props => props.minWidth};
 `;
 
 const Simg = styled.img`
     width: 100%;
+`;
+
+const SButton = styled.button`
+    outline: none;
+    border: none;
+    border-radius: none;
+    background: none;
+    position: absolute;
+    right: 30px;
 `;
 
 const SRoomName = styled.div`
@@ -55,7 +50,6 @@ const SName = styled.div`
 `;
 
 const SRoom = styled.div`
-    margin-right: auto;
     font-weight: 400;
     font-size: 15px;
     line-height: 17px;
@@ -88,73 +82,99 @@ const SIcons = styled.div`
     color: rgba(18, 23, 30, 0.654531);
 `;
 
-interface ICarouselProps {
-    currentSlide: number;
+interface placeProps {
+    img: string
 }
-  
 
-export const Place = () => (
-    <SPlaceDetail>
-      <Simg src={place1} alt="feature place"></Simg>
-      <SRoomName>
-          <SName>SCI Shalismi</SName>
-          <SRoom>Room</SRoom>
-      </SRoomName>
-      <SPriceIcon>
-          <SPerNight>
-              <Sdesc>$120</Sdesc><em>/night</em>
-          </SPerNight>
-          <SIcons>
-              <>3</>
-              <img src={bed} alt="bed icon"></img>
-              <>7</>
-              <img src={shower} alt="bathroom"></img>
-          </SIcons>
-      </SPriceIcon>
-    </SPlaceDetail>
-  );
+export const Place:React.FC<placeProps> = ({ img }) => {
+    const { width } = useWindowDimensions();
+    let minWidth = ""
+    if (width < 768) {
+        minWidth = "185px"
+    }
+    else minWidth = "250px"
+    return (
+        <SPlaceDetail minWidth={minWidth}>
+        <Simg src={img} alt="feature place" ></Simg>
+        <SRoomName>
+            <SName>SCI Shalismi</SName>
+            <SRoom>Room</SRoom>
+        </SRoomName>
+        <SPriceIcon>
+            <SPerNight>
+                <Sdesc>$120</Sdesc><em>/night</em>
+            </SPerNight>
+            <SIcons>
+                <>3</>
+                <img src={bed} alt="bed icon"></img>
+                <>7</>
+                <img src={shower} alt="bathroom"></img>
+            </SIcons>
+        </SPriceIcon>
+        </SPlaceDetail>
+    )
+};
 
 
-export const Carousel:React.FC<props> = ({ children }) => {
- 
-    const [currentSlide, setCurrentSlide] = React.useState(0);
-    const activeSlide = children.map((slide, index) => { 
-        return (
-            <SCarouselSlide active={currentSlide === index} key={index}>
-                {slide}
-            </SCarouselSlide>
-        );
-    });
-
-    const SCarouselSlides = styled.div<ICarouselProps>`
+export const Carousel:React.FC<props> = ({ sliders }) => {
+    interface Cprops {
+        margin: string
+    }
+    let margin = ""
+    const SContainer = styled.div<Cprops>`
     display: flex;
-    ${props =>
-        props.currentSlide &&
-        css`
-        transform: translateX(-${props.currentSlide * 100}%);
-        `};
-    transition: all 0.5s ease;
+    align-items: center;
+    margin-left: ${props => props.margin};
+    margin-right: 0px;
+    justify-items: center;
+    margin-bottom: 70px;
+`;
+
+    const SCarouselSlides = styled.div`
+        display: flex;
+        transition: all 0.5s ease;
+        max-width: calc(100% - 40px);
+        overflow-y: hidden;
+        -ms-overflow-style: none;  
+        scrollbar-width: none; 
+        &:-webkit-scrollbar {
+            display: none;
+    }
     `;
+
+    const { width } = useWindowDimensions();
     
+    if (width > 1100) {
+        margin = "70px"
+    }
+    else {
+        margin = "30px";
+    }
+ 
+    const listRef:any = useRef(null);
+   
+    const scrollRight = () => {
+        if (listRef.current) {
+            listRef.current.scrollBy({
+                top: 0,
+                left: 200,
+                behavior: "smooth",
+            });
+        }
+    };
     return (
         <div>
-            <SContainer>
-                <SCarouselSlides currentSlide={currentSlide}>
-                    {activeSlide}
+            <SContainer margin={margin}>
+                <SCarouselSlides ref={listRef}>
+                    {sliders.map((item, index) => {
+                            return <Place img={item} key={index}/>
+                        }
+                    )}
                 </SCarouselSlides>
+                <SButton onClick={scrollRight}>
+                    <img src={next} alt="next icon"></img>    
+                </SButton>
             </SContainer>
-            <button
-                onClick={() => {
-                    setCurrentSlide((currentSlide - 1 + activeSlide.length) % activeSlide.length);
-                }}>
-                Left
-            </button>
-            <button
-                onClick={() => {
-                    setCurrentSlide((currentSlide + 1) % activeSlide.length);
-                }}>
-                Right
-            </button>
-      </div>
+        </div>
     );
 }
