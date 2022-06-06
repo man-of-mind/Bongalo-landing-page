@@ -15,12 +15,10 @@ import place1 from "../../assets/images/place1.svg";
 import place2 from "../../assets/images/place2.svg";
 import place3 from "../../assets/images/place3.svg";
 import place4 from "../../assets/images/place4.svg";
-import next from "../../assets/images/next.svg";
 import kigaliCity from "../../assets/images/kigaliCity.svg";
 import mountain from "../../assets/images/mountain.svg";
 import paradise from "../../assets/images/paradise.svg";
 import nirvana from "../../assets/images/nirvana.svg";
-import position from "../../assets/images/location2.svg";
 import availability from "../../assets/images/availability.svg";
 import client from "../../assets/images/client.svg";
 import support from "../../assets/images/support.svg";
@@ -31,14 +29,28 @@ import nkap from "../../assets/images/nkap.svg";
 import Footer from "../Footer/footer";
 import useWindowDimensions from "../hook";
 import { Carousel } from "../Carousel/carousel";
+import { Carousel2 } from "../Carousel/carousel2";
 
 
 const Home = () => {
-    const data = [
-        place1,
-        place2,
-        place3,
-        place4
+    const data = [ place1, place2, place3, place4 ];
+    const amazingData = [
+        {
+            img: kigaliCity,
+            text: "Kigali Genocie Memorial"
+        },
+        {
+            img: mountain,
+            text: "Mountain View"
+        },
+        {
+            img: paradise,
+            text: "Anastasia Paradise"
+        },
+        {
+            img: nirvana,
+            text: "Nirvana Heights"
+        }
     ]
 
     const { width } = useWindowDimensions();
@@ -144,51 +156,9 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles['featured-place']}>Featured Places</div>
-                <div className={styles['wrapper']}>
-                    <Carousel sliders={data} />
-                </div>
+                <Carousel sliders={data} />
                 <div className={styles['featured-place']}>Some Amazing Experiences</div>
-                <div className={styles['wrapper']}>
-                    <div className={styles['places']}>
-                        <div className={styles['place-detail']}>
-                            <img src={kigaliCity} alt="" className={styles['img']}></img><br></br><br></br>
-                            <span>Kigali Genocie Memorial</span>
-                            <div className={styles['description']}>
-                                <img src={position} alt="location icon"></img>
-                                <span>Gisozi , Kigali</span>
-                            </div>
-                        </div>
-                        <div className={styles['place-detail']}>
-                            <img src={mountain} alt="" className={styles['img']} ></img><br></br><br></br>
-                            <span>Mountain View</span>
-                            <div className={styles['description']}>
-                                <img src={position} alt="location icon"></img>
-                                <span>Gisozi , Kigali</span>
-                            </div>
-                        </div>
-                        <div className={styles['place-detail']}>
-                            <img src={paradise} alt="" className={styles['img']} ></img><br></br><br></br>
-                            <span>Anastasia Paradise</span>
-                            <div className={styles['description']}>
-                                <img src={position} alt="location icon"></img>
-                                <span>Gisozi , Kigali</span>
-                            </div>
-                        </div>
-                        <div className={styles['place-detail']}>
-                            <div>
-                                <img src={nirvana} alt="" className={styles['img']}></img><br></br><br></br>
-                                <span>Nirvana Heights</span>
-                                <div className={styles['description']}>
-                                    <img src={position} alt="location icon"></img>
-                                    <span>Gisozi , Kigali</span>
-                                </div>
-                            </div>
-                            <div className={styles['next']}>
-                                <img src={next} alt="next icon"></img>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Carousel2 sliders={amazingData}/>
                 <div className={styles['availability']}>
                     <div className={styles['item']}>
                         <img src={availability} alt="availabilty icon"></img>
