@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Bongalo-landing-page/static/css/main.7c51b5db.css",
-    "main.js": "/Bongalo-landing-page/static/js/main.89e99559.js",
+    "main.css": "/Bongalo-landing-page/static/css/main.28b28e47.css",
+    "main.js": "/Bongalo-landing-page/static/js/main.70b6aee3.js",
     "static/media/heroPic.png": "/Bongalo-landing-page/static/media/heroPic.76b836d06c5a23ab934a.png",
     "static/media/yaonde.svg": "/Bongalo-landing-page/static/media/yaonde.9a380a558f96f9fa6f853771d89e45b6.svg",
     "static/media/kigali.svg": "/Bongalo-landing-page/static/media/kigali.fcc0d8af66f89f05cc427de4c7db1576.svg",
@@ -43,11 +43,12 @@
     "static/media/email.svg": "/Bongalo-landing-page/static/media/email.02769a753f12371f20a1fc61e9e22e03.svg",
     "static/media/bed.svg": "/Bongalo-landing-page/static/media/bed.807c8606b47ac0c7765ff9051efc86c3.svg",
     "static/media/facebook.svg": "/Bongalo-landing-page/static/media/facebook.7d230260c5417b12f016b3612a4292ec.svg",
-    "main.7c51b5db.css.map": "/Bongalo-landing-page/static/css/main.7c51b5db.css.map",
-    "main.89e99559.js.map": "/Bongalo-landing-page/static/js/main.89e99559.js.map"
+    "static/media/close-icon.svg": "/Bongalo-landing-page/static/media/close-icon.30136d809b5ff6d196a5837b625555b2.svg",
+    "main.28b28e47.css.map": "/Bongalo-landing-page/static/css/main.28b28e47.css.map",
+    "main.70b6aee3.js.map": "/Bongalo-landing-page/static/js/main.70b6aee3.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c51b5db.css",
-    "static/js/main.89e99559.js"
+    "static/css/main.28b28e47.css",
+    "static/js/main.70b6aee3.js"
   ]
 }
